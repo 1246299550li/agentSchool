@@ -1,4 +1,28 @@
 <!--pages/problem/problem.wxml-->
-<scroll-view class='container'>
-
+<image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
+<scroll-view class='container' scroll-y>
+    <text>{{problem[nowProblem].text}}</text>
+    <radio-group class="radio-group" bindchange="radioChange">
+        <label wx:for="{{problem[nowProblem].items}}" class='radio-box'>
+            <radio class="radio" wx:key="name" value="{{item.name}}" color='red'></radio>
+            <text class='option-text'>{{item.value}}</text>
+        </label>
+    </radio-group>
+    <view class='submit' bindtap='sub'>确定</view>
 </scroll-view>
+<view class='bottom'>
+    <view class='hit' bindtap='showDialogBtn'>提示</view>
+</view>
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">添加数量</view>
+    <view class="modal-content">
+        <view class="modal-input">
+            <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入数量"></input>
+        </view>
+    </view>
+    <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+    </view>
+</view>
