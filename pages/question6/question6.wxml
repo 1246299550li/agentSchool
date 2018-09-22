@@ -1,0 +1,36 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/6.jpg" id='bg' bindtap="hideCover"></image>
+
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+</image> 
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示界面：情报有可能被监听，可以让敌方在截获情报的情况下看不懂。】
+</view>
+
+<image src="http://yylou15.cn/img/12.jpg" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:15%;font-size:14px;'>
+   只要是带兵打仗的将军都知道一个最基本的道理：只有充分了解对手的信息，才可以出奇制胜。所以在二战期间，各个参战国家都建立起自己的情报体系，培养间谍，努力发展无线电，发报机和密电码是战场上传输信息的最主要的工具。为了或缺对方的信息，很多国家都会实施破译，监听等方式来知道对方的军力防御与重要情报。当然二战期间的日军在入侵我国时，对于中国军队也实行了这种监听方式。
+作为一名特工，你掌握的可靠情报急需传给组织，可是如何避免情报泄露呢？
+
+</text>
+<block wx:if="{{!show}}" style="margin-top:20%;">
+<text data-num='1' id='secA' bindtap='judge' style='margin-top:48%;z-index:111111'>
+A)	使用他国语言</text>
+  <text data-num='2' id='secB' bindtap='judge' style='margin-top:48%;z-index:111111'>
+B)	使用暗语</text>
+  <text data-num='3' id='secC' bindtap='judge' style='margin-top:48%;z-index:111111'>
+C)	使用我国地方语言</text>
+</block>
+
+
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

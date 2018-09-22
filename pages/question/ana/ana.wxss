@@ -1,0 +1,18 @@
+/* pages/question/ana/ana.wxss */
+
+#content{
+  color: white;
+  font-family: '黑体';
+  font-size: 40rpx;
+  position: absolute;
+  width: 70%;height: 60vh;
+  top:21%;
+  left: 15%;
+  
+}
+#next{
+  z-index: 9999;
+  width: 100%;
+  height: 100vh;
+  position: absolute
+}

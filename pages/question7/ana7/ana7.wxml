@@ -1,0 +1,6 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'>
+    <text style='display:block;margin-top:15%'>胡服，是刘少奇同志在白区工作时的化名，在之后的其他工作中，胡服也不止一次的被刘少奇同志使用，甚至在当时的中央电报中，都是用胡服来与刘少奇同志传达工作，值得一提的是，少奇两个字也非他的原名，而是用了他的笔名，人们喊的多了自然而然，就改成了刘少奇。</text>
+</view>

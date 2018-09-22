@@ -1,0 +1,6 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'  bindtap='onToNext'>
+    <text style='display:block;margin-top:30%'>执行跟踪时，要注意与目标的距离，保持正常的姿态，避免东张西望暴露自己，同时要注意避免中了目标设置的诡计，时刻要保持自己的行踪不被发现。</text>
+</view>

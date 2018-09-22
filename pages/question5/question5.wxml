@@ -1,0 +1,34 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/5.jpg" id='bg' bindtap="hideCover"></image>
+
+
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示界面：有种诗，叫做藏头诗。】
+</view>
+</image> 
+
+<image src="http://yylou15.cn/img/11.jpg" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{show1}}'> 
+    <text style='display:block;margin-top:15%'>
+    1935年3月10日晚，中央和军委高级领导人在苟坝研究是否攻打打鼓新场，大家一致认为应该攻打，只有毛委员坚决反对。夜深了，你昏昏欲睡地值班，破译敌人联络信息的电台突然有了收获！
+敌人发送的这首奇怪的诗里到底藏着什么玄机？
+打起红腰鼓。
+鼓声震天响。
+新年辞旧岁，
+场圃放炮仗。
+有戏唱武松，
+伏虎景阳冈。			
+输入文本：
+</text>
+<input wx:if="{{!show}}" style="z-index:1010;position:absolute;border-bottom:2px white solid" bindinput='setValue' bindconfirm='judge'></input>
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

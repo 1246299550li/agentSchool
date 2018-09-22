@@ -1,0 +1,6 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'>
+    <text style='display:block;margin-top:15%'>传送这些情报的人，是我军特意从云南白族调过来的小兵，我军早就考虑到了我们的情报会被监听破译，所以我们才运用我国方言的优势来困惑敌人，日本人天真以为自己学会了汉语就搞定了，但却没想到中国语言千千万，文化更是博大精深，怎么可能输给日军的小把戏呢？可怜日军耗尽心思培养了那么多“中国通”，但是最后还是被我们的方言打败了！实在是大快人心啊！</text>
+</view>

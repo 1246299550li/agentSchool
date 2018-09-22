@@ -1,0 +1,6 @@
+<!--pages/transition1/transition1.wxml-->
+
+<image src="http://yylou15.cn/img/2.jpg" id='bg'></image>
+<loading wx:if="{{show}}">
+加载中....
+</loading>

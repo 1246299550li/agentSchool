@@ -1,0 +1,44 @@
+/* pages/question/question.wxss */
+
+#bg{
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  position: absolute;
+}
+
+#bg1{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+#bg2{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+#content{
+  color: #0054c1;
+  font-size:32rpx;
+  position: absolute;
+  width: 80%;height: 60vh;
+  top:5%;
+  left: 10%;
+  
+}
+
+#hint{
+  width: 22.5%;height: 7.5vh;
+  position: absolute;
+  right: 6.5%;bottom: 4.5%;
+  z-index: 111111
+}
+
+#cancel{
+  width: 13.5%;height: 7.5vh;
+  position: absolute;
+  right: 4%;top: 2%;
+  z-index: 11111111
+}

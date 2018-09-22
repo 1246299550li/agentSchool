@@ -1,0 +1,6 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'>
+    <text style='display:block;margin-top:15%'>漫漫长征路，情报工作是指路明灯。军委二局的不懈努力和领导人的正确分析，才使得党和红军能一次次摆脱敌人的围追堵截，保存革命火种。打鼓新场改变了原定作战计划，再一次证实了毛泽同同志的正确预见，使得遵义会议后毛泽东同志的领导地位更加稳固，为之后一系列的军事行动奠定了必要的领导基础。</text>
+</view>

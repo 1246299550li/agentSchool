@@ -1,0 +1,34 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/8.jpg" id='bg' bindtap="hideCover"></image>
+
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示界面：注意时间提示哦，同时也要保护好自己】
+</view>
+</image> 
+
+
+<image src="http://yylou15.cn/img/14.jpg" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:10vh;'>
+   1947年3月中旬的一个星期六，眼看就要下班了，张国疆匆匆交给段伯宇一份秘件电报，说了一句“酌情处理”就先下班走了。段伯宇接过一看，原来电报是国民党三十二军军长打来的，上面写着：“三十二军参谋长王启明叛变，率部5000余人投靠共产党，已派兵追剿，兵力不足，请从速派兵增援。”看完电报后，他知道张国疆把这桩事情推给自己的真正用意了。
+原来，张国疆是王启明的陆大同学，又是交情甚笃的老朋友，他不情愿亲手签发追剿的命令。这时你作为段柏文的特工队友，应该给他怎样的建议呢？
+
+
+
+</text>
+<block wx:if="{{!show}}">
+<view data-num='1' id='secA' bindtap='judge' style='width:90%;height:3vh;top:58vh'>A）立即呈报，避免暴露自己特工身份</view>
+  <view data-num='2' id='secB' bindtap='judge' style='width:90%;height:7vh;top:63vh'>B）通过电报泄露此次情报，为王启明求助组织援助</view>
+  <view data-num='3' id='secC' bindtap='judge' style='width:90%;height:7vh;top:72vh'>C）设法延缓电报，打破请求增援计划</view>
+  </block>
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

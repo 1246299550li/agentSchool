@@ -1,0 +1,28 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/0.jpg" id='bg' bindtap="hideCover"></image>
+ 
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+
+
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}'>
+    从第三个数字开始，任意一个数字等于它前面两个数字之和。
+</view>
+</image>
+
+<image src="http://yylou15.cn/img/20.png" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{!show}}'>
+    <text style='display:block;margin-top:30%'>执行任务时要冷静分析：
+    下列数据中缺失的数字是：</text>
+    <text style='display:block'> 4 、7 、11、18、29、47、（ ）</text>
+    请输入
+    <input style="z-index:1111111;position:absolute;border-bottom:3px white solid" bindinput='setValue' bindconfirm='judge'></input>
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

@@ -1,0 +1,6 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'>
+    <text style='display:block;margin-top:15%'>这种电报本应立即呈报，因为正好是在星期六下午利用实践的特殊性，借机放在抽屉里，这就晚报了两天，因此顺利掩护了王启明安全到达解放区，同时也避免了暴露身份的危险，任务巧妙完成。</text>
+</view>

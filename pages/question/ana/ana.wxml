@@ -1,0 +1,7 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2'></image>
+<view id='content'>
+    <text style='display:block;margin-top:30%'>从第三个数字开始，任意一个数字等于它前面两个数字之和。</text>
+</view>
+<view id='next'  bindtap='onToNext'> </view>

@@ -1,0 +1,23 @@
+/* pages/index/index.wxss */
+page{
+  background-color: #e60026
+}
+#bg{
+  width: 100%;
+  height: 95vh;
+  z-index: -1;
+  position: absolute;
+}
+#input{
+  width: 85%;position: absolute;
+  left: 7.5%;top:52vh;color: white;
+  font-size: 40rpx;
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold
+}
+
+#button{
+  width: 70%;position: absolute;
+  left: 15%;top:68vh;height: 16vh;
+}

@@ -1,0 +1,7 @@
+<!--pages/question/ana/ana.wxml-->
+
+<image  src="http://yylou15.cn/img/16.jpg" id='bg2' bindtap='onToNext'></image>
+<view id='content'>
+    <text style='display:block;margin-top:15%'>敌比故多了一笔在头上，按地图方位来看，在北方。
+顾顺章的叛变给我党的地下组织造成了巨大破坏。幸而这个重要情报被打入国民党中统机关任机要秘书的钱壮飞获悉，连夜报告特科负责人李克农，再转报中央。周恩来在陈云（即题目提及的李介生）协助下，采取果断措施，立即安排中央机关和人员安全转移，使国民党反动派将共产党领导人一网打尽的计划落空。</text>
+</view>

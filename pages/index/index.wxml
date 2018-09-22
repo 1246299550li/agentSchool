@@ -1,0 +1,4 @@
+<!--pages/index/index.wxml-->
+<image src="http://yylou15.cn/img/1.jpg" id='bg'></image>
+<input id='input' bindinput='setValue'></input>
+<view id='button' bindtap='onToTransition'></view> 

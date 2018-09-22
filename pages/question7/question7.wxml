@@ -1,0 +1,23 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/7.jpg" id='bg' bindtap="hideCover"></image>
+
+
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示界面：取各边中间有惊喜】
+</view>
+</image> 
+
+<image src="http://yylou15.cn/img/13.jpg" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:15%'>
+    1941年7月，刘震率新四军四师十旅抵达安徽蒙城县涡河边的龙亢镇后，突然接到上级电令:”有一位重要同志由延安到苏北，途经你部，必须派可靠部队接送，确保安全。”接此任务后，刘震立即派警卫连前去接送，对连长交代说: “你们去接送一个负责同志，这是情报，沿途要绝对保密和保证安全。"连长说:“保证完成任务。”
+【题目界面】你接到了上级的一封情报，派遣你去执行任务，这个任务是什么呢？
+</text>
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

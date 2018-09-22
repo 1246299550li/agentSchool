@@ -1,0 +1,10 @@
+<!--pages/transition1/transition1.wxml-->
+
+<loading wx:if="{{show}}">
+加载中....
+</loading>
+
+
+<view class='center-text'>
+    考 核 正 式 开 始
+</view>

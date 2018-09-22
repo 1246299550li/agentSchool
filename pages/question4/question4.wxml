@@ -1,0 +1,41 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/4.jpg" id='bg' bindtap="hideCover"></image>
+
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+
+<image  src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+
+
+  
+
+<view id='cancel' bindtap='showContent'></view>
+<view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示界面：暗语是字谜，观察出现变化的方位。】
+</view>
+</image> 
+
+<image src="http://yylou15.cn/img/10.jpg" id='bg1' animation="{{animationData1}}"  >
+<view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:15%'>
+    顾顺章被捕叛变，我党在武汉的地下交通机关和红二军团驻武汉办事处暴露，已经有10多名同志被捕牺牲了。有可靠情报显示他打算出卖中共中央在上海的机关和主要领导人！大转移开始。
+接应你的同志给了你一句暗语“故人变敌人”，又暗示你是钟楼周边的某个地点，接下来你要去哪里？
+ 
+</text>
+<block wx:if="{{!show}}">
+<view data-num='1' id='secA' bindtap='judge' style='height:18px;top:74%;z-index:1000'>
+A.东边的洋装店</view>
+  <view data-num='2' id='secB' bindtap='judge' style='height:18px;top:81%;z-index:1000'>
+B.南边的熟食店</view>
+  <view data-num='3' id='secC' bindtap='judge' style='height:18px;top:88%;z-index:1000'>
+C.西边的邮局</view>
+  <view data-num='4' id='secD' bindtap='judge' style='height:18px;top:95%;z-index:1000'>
+D.北边的饭馆</view>
+</block>
+</view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
+

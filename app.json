@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/question5/question5",
+    "pages/question3/question3",
+    "pages/question2/question2",
+    "pages/share/share",
+    "pages/question8/question8",
+    "pages/question7/question7",
+    "pages/question6/question6",
+    "pages/question4/question4",
+    "pages/question/ana/ana",
+    "pages/question1/ana1/ana1",
+    "pages/transition1/transition1",
+    "pages/transition2/transition2",
+    "pages/question/question",
+    "pages/question1/question1",
+    "pages/question2/ana2/ana2",
+
+    "pages/question3/ana3/ana3",
+
+    "pages/question4/ana4/ana4",
+    "pages/question5/ana5/ana5",
+    "pages/question6/ana6/ana6",
+    "pages/question7/ana7/ana7",
+    "pages/question8/ana8/ana8"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "特工学院",
+    "navigationBarTextStyle":"black"
+  }
+}

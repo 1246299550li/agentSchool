@@ -1,0 +1,33 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/3.jpg" id='bg' bindtap="judge"></image>
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+
+<image src="http://yylou15.cn/img/15.jpg" id='bg2'>
+
+  <view data-num='1' id='secA' bindtap='judge' style="height:10%;top:47%"></view>
+  <view data-num='2' id='secB' bindtap='judge' style="height:10%;top:57%"></view>
+  <view data-num='3' id='secC' bindtap='judge' style="height:10%;top:67%"></view>
+  <view id='cancel' bindtap='showContent'></view>
+  <view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    【提示：跟踪者一般穿便于行动的衣服，携带一些小物件来掩护，也不会有太多动作】
+  </view>
+</image>
+
+<image src="http://yylou15.cn/img/9.jpg" id='bg1' animation="{{animationData1}}">
+  <view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:15%'>
+    一、1922年8月末，你受组织委派，要将一份文书送给毛石山同志，以便工人罢工运动的组织和湖南的革命活动的顺利进行。组织再三告诫你要谨慎行事。
+八月的长沙还是很热的，街上人来人往，拥挤而嘈杂，你打算前往事先约定的地点。
+或许是由于职业的敏感， 你发觉似乎有什么人在盯着自己，你回头一看，捕捉到了三个身影：
+A）一个赤膊汉子，皮肤黝黑满身是汗，背着一个大包袱。 (携带行李，行动不便，不可能进行跟踪任务)
+B）一个中年男子，穿着一件长衫，靠着墙根读报。（跟踪者有时会更换衣物，长衫是个好掩护，并且报纸常常用于掩护。）
+C）一个年轻女子，穿着带跟的女式皮鞋，在路口张望。
+谁更可能是跟踪者呢？
+</text>
+  </view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>

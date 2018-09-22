@@ -1,0 +1,36 @@
+<!--pages/question/question.wxml-->
+<image wx:hidden='{{!show}}' animation="{{animationData}}" src="http://yylou15.cn/img/0.jpg" id='bg' bindtap="hideCover"></image>
+
+<view class='result' wx:if="{{showRes}}">
+    <image class='res_icon' src="/imgs/{{isRight?'success_1f':'wrong'}}.png"></image>
+</view>
+<image src="http://yylou15.cn/img/15.jpg" id='bg2' bindtap="hideCover">
+  <view id='cancel' bindtap='showContent'></view>
+  <view id='content' wx:if='{{show1}}' style='margin-top:10%'>
+    执行跟踪时，要注意与目标的距离，保持正常的姿态，避免东张西望暴露自己，同时要注意避免中了目标设置的诡计，时刻要保持自己的行踪不被发现。
+  </view>
+</image>
+
+<image src="http://yylou15.cn/img/20.png" id='bg1' animation="{{animationData1}}">
+  <view id='content' wx:if='{{show1}}'>
+    <text style='display:block;margin-top:30%'>
+    执行任务时要随机应变。
+    我的跟踪目标似乎不见了，我应该：
+   </text>
+    <block wx:if="{{!show}}">
+      <view data-num='1' id='secA' bindtap='judge' style='height:32rpx;top:48%;z-index:1000'>
+        A.四处走动，四处观望，尽快找到他</view>
+      <view data-num='2' id='secB' bindtap='judge' style='height:32rpx;top:62%;z-index:1000'>
+        B.转动眼球仔细搜索，尽量减少转头</view>
+        <view data-num='3' id='secC' bindtap='judge' style='height:150rpx;top:76%;z-index:1000'>
+        <text style='display:block'>我的跟踪目标频繁地穿越马路，时而折回去走，这说明：</text>
+        A.糟了，我可能被发现了!我要保持距离改变伪装。
+      </view>
+      <view data-num='4' id='secD' bindtap='judge' style='height:32rpx;top:106%;z-index:1000'>
+        B.他的行为这么怪异一定在四处留暗号，我要再跟紧一点</view>
+    </block>
+  </view>
+</image>
+
+<view id='hint' bindtap='showHint'>
+</view>
