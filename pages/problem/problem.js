@@ -117,7 +117,7 @@ Page({
         chooseAns: null,
         nowProblem: 0
     },
-    bindKeyInput: function (e) {
+    bindKeyInput: function(e) {
         this.setData({
             chooseAns: e.detail.value
         })
@@ -139,7 +139,7 @@ Page({
             return;
         }
         let now = this.data.nowProblem;
-        if (now < 6) {
+        if (now < 5) {
             now++;
         }
         this.setData({
@@ -155,7 +155,7 @@ Page({
             wx.showToast({
                 title: '您已回答过该问题',
                 image: '../../images/warning.png',
-                duration:1000,
+                duration: 1000,
                 mask: true
             })
             return;
@@ -173,6 +173,12 @@ Page({
                 duration: 1000,
                 mask: true
             })
+            const innerAudioContext = wx.createInnerAudioContext()
+            innerAudioContext.autoplay = true
+            innerAudioContext.src = 'http://ysb.yisell.com/yisell/ybys2018050819052088/sound/yisell_sound_2014042815115825634_88366.wav?from=groupmessage'
+            innerAudioContext.onPlay(() => {
+                console.log('开始播放')
+            })
             app.globalData.goal++;
             let problem = this.data.problem;
             problem[nowProblem].isReply = true;
@@ -188,6 +194,12 @@ Page({
                 image: '../../images/fail.png',
                 mask: true
             })
+            const innerAudioContext = wx.createInnerAudioContext()
+            innerAudioContext.autoplay = true
+            innerAudioContext.src = 'http://ysc.yisell.com/yisell/ycys2018050819052088/sound/yisell_sound_2014080223201047098_66366.mp3?from=groupmessage'
+            innerAudioContext.onPlay(() => {
+                console.log('开始播放')
+            })
             let problem = this.data.problem;
             console.log(problem);
             problem[nowProblem].isReply = true;
@@ -197,7 +209,7 @@ Page({
                 })
             }, 800)
         }
-
+        console.log(app.globalData.goal);
     },
     onLoad: function(options) {
 
