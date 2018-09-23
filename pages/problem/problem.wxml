@@ -2,27 +2,42 @@
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
 <scroll-view class='container' scroll-y>
     <text>{{problem[nowProblem].text}}</text>
-    <radio-group class="radio-group" bindchange="radioChange">
+    <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>
         <label wx:for="{{problem[nowProblem].items}}" class='radio-box'>
             <radio class="radio" wx:key="name" value="{{item.name}}" color='red'></radio>
             <text class='option-text'>{{item.value}}</text>
         </label>
     </radio-group>
-    <view class='submit' bindtap='sub'>确定</view>
+    <view wx:if='{{problem[nowProblem].problemType == 2}}' style='display:flex;justify-content: center;flex-direction:column;align-items:center;'>
+        <view>
+            <text style='font-size:60rpx;text-align:center;'>{{problem[nowProblem].items}}</text>
+        </view>
+        <view>
+            <input class='input' placeholder-style="color:red;" placeholder="请输入答案" maxlength="10" bindinput="bindKeyInput"></input>
+        </view>
+    </view>
+    <view class='submit' bindtap='sub' wx:if='{{!problem[nowProblem].isReply}}'>确定</view>
+    <view wx:if='{{problem[nowProblem].isReply}}'>
+        <view class='title'>解析</view>
+        <text>{{problem[nowProblem].solve}}</text>
+    </view>
 </scroll-view>
 <view class='bottom'>
     <view class='hit' bindtap='showDialogBtn'>提示</view>
+    <view class='solve'></view>
+    <view class='next' bindtap='nextProblem'>
+        <image class='next-icon' src='../../images/next.png'></image>
+    </view>
 </view>
+<!-- 模态框 -->
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modal-dialog" wx:if="{{showModal}}">
-    <view class="modal-title">添加数量</view>
+    <view class="modal-title">提示</view>
     <view class="modal-content">
-        <view class="modal-input">
-            <input placeholder-class="input-holder" type="number" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入数量"></input>
-        </view>
+        <text class="modal-text">{{problem[nowProblem].hit}}</text>
     </view>
     <view class="modal-footer">
-        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
-        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+        <!-- <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view> -->
+        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">知道了</view>
     </view>
 </view>
