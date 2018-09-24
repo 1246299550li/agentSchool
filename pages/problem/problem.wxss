@@ -3,8 +3,8 @@
 .container {
     width: 100vw;
     height: 90vh;
-    padding: 10vw;
-    padding-top: 20vw;
+    padding: 11vw;
+    padding-top: 18vw;
     /* background-color: greenyellow; */
 }
 

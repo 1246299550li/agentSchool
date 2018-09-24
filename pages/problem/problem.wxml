@@ -1,5 +1,6 @@
 <!--pages/problem/problem.wxml-->
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
+<image src='{{problem[nowProblem].bg}}' style='position:fixed;z-index:-8;height:170rpx;width:170rpx;top:60rpx;left:50rpx;'></image>
 <scroll-view class='container' scroll-y>
     <text>{{problem[nowProblem].text}}</text>
     <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>

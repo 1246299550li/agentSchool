@@ -1,6 +1,7 @@
 {
     "pages": [
-        "pages/problem/problem"
+        "pages/problem/problem",
+        "pages/loading1/loading1"
     ],
     "window": {
         "backgroundTextStyle": "light",
