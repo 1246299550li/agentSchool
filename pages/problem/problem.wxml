@@ -33,6 +33,7 @@
 <!-- 模态框 -->
 <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modal-dialog" wx:if="{{showModal}}">
+    <image class="modal-img" src="{{hitUrl}}" mode="widthFix"></image>
     <view class="modal-title">提示</view>
     <view class="modal-content">
         <text class="modal-text">{{problem[nowProblem].hit}}</text>

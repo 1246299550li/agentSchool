@@ -99,40 +99,46 @@
     background: #000;
     opacity: 0.6;
     overflow: hidden;
-    z-index: 9000;
+    z-index: 900;
     color: #fff;
 }
 
 .modal-dialog {
-    width: 540rpx;
-    overflow: hidden;
+    width: 450rpx;
+    /* overflow: hidden; */
     position: fixed;
-    top: 50%;
-    left: 0;
-    z-index: 9999;
-    background: #f9f9f9;
-    margin: -180rpx 105rpx;
-    border-radius: 20rpx;
+    top: 32%;
+    left: 150rpx;
+    z-index: 999;
+}
+
+.modal-img {
+    position: absolute;
+    z-index: -9;
+    height: 400rpx;
+    width: 500rpx;
+    top: -30rpx;
+    left: -32rpx;
 }
 
 .modal-title {
-    padding-top: 30rpx;
-    font-size: 36rpx;
-    color: #030303;
+    padding: 30rpx 0;
+    font-size: 40rpx;
+    color: red;
     text-align: center;
 }
 
 .modal-content {
-    padding: 25rpx 32rpx;
-    font-size: 34rpx;
+    padding: 28rpx 28rpx;
+    font-size: 38rpx;
 }
 
 .modal-footer {
     display: flex;
     flex-direction: row;
     height: 86rpx;
-    border-top: 1px solid #dedede;
-    font-size: 34rpx;
+    /* border-top: 1px solid #dedede; */
+    font-size: 40rpx;
     line-height: 86rpx;
 }
 
@@ -147,6 +153,6 @@
 .btn-confirm {
     margin: 0 auto;
     width: 50%;
-    color: #ec5300;
+    color: red;
     text-align: center;
 }
