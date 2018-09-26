@@ -164,6 +164,10 @@ Page({
         let now = this.data.nowProblem;
         if (now < 5) {
             now++;
+        } else {
+            wx.navigateTo({
+                url: '../share/share'
+            })
         }
         this.setData({
             nowProblem: now

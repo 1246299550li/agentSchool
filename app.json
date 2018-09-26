@@ -1,10 +1,11 @@
 {
     "pages": [
+        
         "pages/index/index",
         "pages/problem/problem",
         "pages/pre/pre",
-        "pages/loading/loading"
-        
+        "pages/loading/loading",
+        "pages/share/share"
     ],
     "window": {
         "backgroundTextStyle": "light",
