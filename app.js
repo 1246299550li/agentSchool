@@ -35,6 +35,7 @@ App({
     },
     globalData: {
         userInfo: null,
-        goal: 0
+        goal: 0,
+        userName:null
     }
 })

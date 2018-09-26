@@ -1,7 +1,5 @@
 <!--pages/problem/problem.wxml-->
-<image src="{{bg}}" mode="scaleToFill" style='position:absolute;z-index:9999;height:100vh;width:100vw; top:0;' bindtap='start' wx:if='{{isShow}}'></image>
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
-<image src='{{problem[nowProblem].bg}}' style='position:fixed;z-index:-8;height:170rpx;width:170rpx;top:60rpx;left:50rpx;'></image>
 <scroll-view class='container' scroll-y>
     <text>{{problem[nowProblem].text}}</text>
     <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>
@@ -25,22 +23,9 @@
     </view>
 </scroll-view>
 <view class='bottom'>
-    <view class='hit' bindtap='showDialogBtn'>提示</view>
+    <view class='solve'></view>
     <view class='solve'></view>
     <view class='next' bindtap='nextProblem'>
         <image class='next-icon' src='../../images/next.png'></image>
-    </view>
-</view>
-<!-- 模态框 -->
-<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
-<view class="modal-dialog" wx:if="{{showModal}}">
-    <image class="modal-img" src="{{hitUrl}}" mode="widthFix"></image>
-    <view class="modal-title">提示</view>
-    <view class="modal-content">
-        <text class="modal-text">{{problem[nowProblem].hit}}</text>
-    </view>
-    <view class="modal-footer">
-        <!-- <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view> -->
-        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">知道了</view>
     </view>
 </view>

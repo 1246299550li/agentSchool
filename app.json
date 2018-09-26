@@ -2,7 +2,8 @@
     "pages": [
         "pages/index/index",
         "pages/problem/problem",
-        "pages/loading1/loading1"
+        "pages/pre/pre",
+        "pages/loading/loading"
         
     ],
     "window": {

@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
-<view class="container">
-<input class='input'></input>
-<view class='btn'></view>
+<view class="container" wx:if='{{isShow}}'>
+    <input class='input' placeholder="请输入" placeholder-style="color:white;" maxlength="10" bindinput="bindKeyInput"></input>
+    <view class='btn' bindtap='start'></view>
 </view>

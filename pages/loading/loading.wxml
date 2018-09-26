@@ -1,0 +1,2 @@
+<!--pages/loading1/loading.wxml-->
+<image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>

@@ -1,0 +1,77 @@
+/* pages/problem/problem.wxss */
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    padding: 11vw;
+    padding-top: 30vw;
+    /* background-color: greenyellow; */
+}
+
+.radio-group {
+    margin-top: 40rpx;
+    border-bottom: 1px solid #ddd;
+}
+
+.radio-box {
+    margin-bottom: 40rpx;
+    display: flex;
+}
+
+.radio {
+    border-top: 1px solid #ddd;
+}
+
+.option-text {
+    width: auto;
+}
+
+.input {
+    border: 6rpx solid red;
+    margin: 60rpx 0;
+}
+
+.submit {
+    margin: 60rpx auto;
+    border: 6rpx solid red;
+    height: 70rpx;
+    width: 150rpx;
+    border-radius: 10rpx;
+    color: red;
+    line-height: 70rpx;
+    text-align: center;
+    font-size: 50rpx;
+}
+
+.title {
+    color: red;
+    line-height: 70rpx;
+    text-align: center;
+    font-size: 48rpx;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 10vh;
+}
+
+.solve {
+    height: 80rpx;
+    width: 150rpx;
+    border-radius: 10rpx;
+    line-height: 80rpx;
+    text-align: center;
+    font-size: 50rpx;
+}
+
+.next {
+    height: 74rpx;
+    width: 130rpx;
+}
+
+.next-icon {
+    height: 100%;
+    width: 100%;
+}
