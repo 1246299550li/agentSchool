@@ -1,5 +1,5 @@
 <!--pages/problem/problem.wxml-->
-<image src="{{bg}}" mode="scaleToFill" style='position:absolute;z-index:9999;height:100vh;width:100vw; top:0;' bindtap='start' wx:if='{{isShow}}'></image>
+<image src="{{bg}}" mode="scaleToFill" style='position:absolute;z-index:9999;height:100vh;width:100vw; top:0;' bindtap='start' wx:if='{{isShow}}' animation="{{animationData}}"></image>
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
 <image src='{{problem[nowProblem].bg}}' style='position:fixed;z-index:-8;height:170rpx;width:170rpx;top:60rpx;left:50rpx;'></image>
 <scroll-view class='container' scroll-y>

@@ -123,10 +123,23 @@ Page({
         isShow:true
     },
     start: function () {
-        this.setData({
-            isShow: false
+        var animation = wx.createAnimation({
+            duration: 1500,
+            timingFunction: 'ease',
         })
+        this.animation = animation
+        animation.opacity(0).step()
+        this.setData({
+            animationData: animation.export()
+        })
+        var that = this;
+        setTimeout(function () {
+            that.setData({
+                isShow: false
+            })
+        }, 1500) 
     },
+    
     bindKeyInput: function(e) {
         this.setData({
             chooseAns: e.detail.value
