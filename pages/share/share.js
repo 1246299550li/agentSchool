@@ -18,15 +18,15 @@ Page({
         });
         if (app.globalData.goal < 4) {
             this.setData({
-                nick: '普通\n'
+                nick: '合格特工\n'
             })
         } else if (app.globalData.goal < 6) {
             this.setData({
-                nick: '优秀\n'
+                nick: '优秀特工\n'
             })
         } else {
             this.setData({
-                nick: '王牌\n'
+                nick: '王牌特工\n'
             })
         }
     },

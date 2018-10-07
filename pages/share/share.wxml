@@ -2,6 +2,6 @@
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
 <view class="container">
     <view class='nickname'>{{nickname}}:</view>
-    <view class='nick'>{{nick}} 特工称号</view>
+    <view class='nick'>{{nick}}称号</view>
     <button class='btn' open-type="share">点击分享</button>
 </view>

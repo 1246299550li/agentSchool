@@ -10,14 +10,17 @@ Page({
                 text: "1922年8月末，你受组织委派，要将一份文书送给毛石山同志，以便工人罢工运动的组织和湖南的革命活动的顺利进行。组织再三告诫你要谨慎行事。 八月的长沙还是很热的，街上人来人往，拥挤而嘈杂，你打算前往事先约定的地点。或许是由于职业的敏感， 你发觉似乎有什么人在盯着自己，你回头一看，捕捉到了三个身影,谁更可能是跟踪者呢？",
                 items: [{
                         name: 'a',
+                        checked: false,
                         value: 'A）一个赤膊汉子，皮肤黝黑满身是汗，背着一个大包袱。 '
                     },
                     {
                         name: 'b',
+                        checked: false,
                         value: 'B）一个中年男子，穿着一件长衫，靠着墙根读报。'
                     },
                     {
                         name: 'c',
+                        checked: false,
                         value: 'C）一个年轻女子，穿着带跟的女式皮鞋，在路口张望.'
                     },
                 ],
@@ -32,18 +35,22 @@ Page({
                 text: "顾顺章被捕叛变，我党在武汉的地下交通机关和红二军团驻武汉办事处暴露，已经有10多名同志被捕牺牲了。有可靠情报显示他打算出卖中共中央在上海的机关和主要领导人！大转移开始.接应你的同志给了你一句暗语“故人变敌人”，又暗示你是钟楼周边的某个地点，接下来你要去哪里？",
                 items: [{
                         name: 'a',
+                    checked: false,
                         value: 'A）东边的洋装店'
                     },
                     {
                         name: 'b',
+                        checked: false,
                         value: 'B）南边的熟食店'
                     },
                     {
                         name: 'c',
+                        checked: false,
                         value: 'C）西边的邮局'
                     },
                     {
                         name: 'd',
+                        checked: false,
                         value: 'D）北边的饭馆'
                     },
                 ],
@@ -68,14 +75,17 @@ Page({
                 text: "只要是带兵打仗的将军都知道一个最基本的道理：只有充分了解对手的信息，才可以出奇制胜。所以在二战期间，各个参战国家都建立起自己的情报体系，培养间谍，努力发展无线电，发报机和密电码是战场上传输信息的最主要的工具。为了或缺对方的信息，很多国家都会实施破译，监听等方式来知道对方的军力防御与重要情报。当然二战期间的日军在入侵我国时，对于中国军队也实行了这种监听方式。作为一名特工，你掌握的可靠情报急需传给组织，可是如何避免情报泄露呢？",
                 items: [{
                         name: 'a',
+                    checked: false,
                         value: 'A）使用他国语言'
                     },
                     {
                         name: 'b',
+                        checked: false,
                         value: 'B）使用暗语'
                     },
                     {
                         name: 'c',
+                        checked: false,
                         value: 'C）使用我国地方语言'
                     },
                 ],
@@ -100,14 +110,17 @@ Page({
                 text: "1947年3月中旬的一个星期六，眼看就要下班了，张国疆匆匆交给段伯宇一份秘件电报，说了一句“酌情处理”就先下班走了。段伯宇接过一看，原来电报是国民党三十二军军长打来的，上面写着：“三十二军参谋长王启明叛变，率部5000余人投靠共产党，已派兵追剿，兵力不足，请从速派兵增援。”看完电报后，他知道张国疆把这桩事情推给自己的真正用意了。原来，张国疆是王启明的陆大同学，又是交情甚笃的老朋友，他不情愿亲手签发追剿的命令。这时你作为段柏文的特工队友，应该给他怎样的建议呢？",
                 items: [{
                         name: 'a',
+                    checked: false,
                         value: 'A）立即呈报，避免暴露自己特工身份'
                     },
                     {
                         name: 'b',
+                        checked: false,
                         value: 'B）通过电报泄露此次情报，为王启明求助组织援助'
                     },
                     {
                         name: 'c',
+                        checked: false,
                         value: 'C）设法延缓电报，打破请求增援计划'
                     },
                 ],
@@ -120,9 +133,9 @@ Page({
         ],
         chooseAns: null,
         nowProblem: 0,
-        isShow:true
+        isShow: true
     },
-    start: function () {
+    start: function() {
         var animation = wx.createAnimation({
             duration: 1500,
             timingFunction: 'ease',
@@ -133,23 +146,30 @@ Page({
             animationData: animation.export()
         })
         var that = this;
-        setTimeout(function () {
+        setTimeout(function() {
             that.setData({
                 isShow: false
             })
-        }, 1500) 
+        }, 1500)
     },
-    
+
     bindKeyInput: function(e) {
         this.setData({
             chooseAns: e.detail.value
         })
     },
     radioChange: function(e) {
+        // console.log('radio发生change事件', list)
+        this.data.problem[this.data.nowProblem].items.forEach(function(res){
+            if (res.name == e.detail.value){
+                res.checked = true;
+            }
+        })
+        // console.log('radio发生change事件', list)
         this.setData({
             chooseAns: e.detail.value
         })
-        console.log('radio发生change事件，携带value值为：', e.detail.value)
+        // console.log('radio发生change事件，携带value值为：', e.detail.value)
     },
     nextProblem: function() {
         let nowProblem = this.data.nowProblem;
@@ -200,6 +220,17 @@ Page({
                 duration: 1000,
                 mask: true
             })
+            // wx.createSelectorQuery().selectAll('.radio').fields({
+            //     properties: ['checked']
+            // }, function(res) {
+            //     res.forEach(function(rect) {
+            //         rect.checked = false;
+            //         console.log('选中信息', rect.checked);
+            //     })
+            // }).exec()
+            // this.setData({
+            //     chooseAns: null
+            // })
             const innerAudioContext = wx.createInnerAudioContext()
             innerAudioContext.autoplay = true
             innerAudioContext.src = 'http://ysb.yisell.com/yisell/ybys2018050819052088/sound/yisell_sound_2014042815115825634_88366.wav?from=groupmessage'

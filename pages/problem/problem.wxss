@@ -4,7 +4,7 @@
     width: 100vw;
     height: 90vh;
     padding: 11vw;
-    padding-top: 19vw;
+    padding-top: 25vw;
     /* background-color: greenyellow; */
 }
 

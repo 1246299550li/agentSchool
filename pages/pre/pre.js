@@ -61,6 +61,11 @@ Page({
         })
     },
     radioChange: function(e) {
+        this.data.problem[this.data.nowProblem].items.forEach(function (res) {
+            if (res.name == e.detail.value) {
+                res.checked = true;
+            }
+        })
         this.setData({
             chooseAns: e.detail.value
         })

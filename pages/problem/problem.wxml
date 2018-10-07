@@ -1,12 +1,12 @@
 <!--pages/problem/problem.wxml-->
 <image src="{{bg}}" mode="scaleToFill" style='position:absolute;z-index:9999;height:100vh;width:100vw; top:0;' bindtap='start' wx:if='{{isShow}}' animation="{{animationData}}"></image>
 <image src="{{background}}" mode="scaleToFill" style='position:absolute;z-index:-9;height:100vh;width:100vw; top:0;'></image>
-<image src='{{problem[nowProblem].bg}}' style='position:fixed;z-index:-8;height:170rpx;width:170rpx;top:60rpx;left:50rpx;'></image>
+<image src='{{problem[nowProblem].bg}}' style='position:fixed;z-index:-8;height:160rpx;width:160rpx;top:45rpx;left:45rpx;'></image>
 <scroll-view class='container' scroll-y>
     <text>{{problem[nowProblem].text}}</text>
     <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>
         <label wx:for="{{problem[nowProblem].items}}" class='radio-box'>
-            <radio class="radio" wx:key="name" value="{{item.name}}" color='red'></radio>
+            <radio class="radio" wx:key="name" value="{{item.name}}" color='red' checked="{{item.checked}}"></radio>
             <text class='option-text'>{{item.value}}</text>
         </label>
     </radio-group>

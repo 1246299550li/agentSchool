@@ -4,7 +4,7 @@
     <text>{{problem[nowProblem].text}}</text>
     <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>
         <label wx:for="{{problem[nowProblem].items}}" class='radio-box'>
-            <radio class="radio" wx:key="name" value="{{item.name}}" color='red'></radio>
+            <radio class="radio" wx:key="name" value="{{item.name}}" color='red' checked="{{item.checked}}"></radio>
             <text class='option-text'>{{item.value}}</text>
         </label>
     </radio-group>
