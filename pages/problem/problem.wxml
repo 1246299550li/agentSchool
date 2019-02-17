@@ -6,7 +6,7 @@
     <text>{{problem[nowProblem].text}}</text>
     <radio-group class="radio-group" bindchange="radioChange" wx:if='{{problem[nowProblem].problemType == 1}}'>
         <label wx:for="{{problem[nowProblem].items}}" class='radio-box'>
-            <radio class="radio" wx:key="name" value="{{item.name}}" color='red' checked="{{item.checked}}"></radio>
+            <radio class="radio" wx:key="name" value="{{item.name}}" color='rgb(210,43,31)' checked="{{item.checked}}"></radio>
             <text class='option-text'>{{item.value}}</text>
         </label>
     </radio-group>
@@ -15,7 +15,7 @@
             <text style='font-size:60rpx;text-align:center;'>{{problem[nowProblem].items}}</text>
         </view>
         <view>
-            <input class='input' placeholder-style="color:red;" placeholder="请输入答案" maxlength="10" bindinput="bindKeyInput"></input>
+            <input class='input' placeholder-style="color:rgb(126, 72, 72); text-align:center;" auto-focus='true' placeholder="请输入答案" maxlength="10" bindinput="bindKeyInput"></input>
         </view>
     </view>
     <view class='submit' bindtap='sub' wx:if='{{!problem[nowProblem].isReply}}'>确定</view>

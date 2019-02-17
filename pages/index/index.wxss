@@ -12,18 +12,18 @@
 }
 
 .input {
-    margin-top: 600rpx; 
-    width: 80%;
+    margin-top: 670rpx; 
+    width: 78%;
     height: 110rpx;
     line-height: 100rpx;
     font-size: 60rpx;
     /* border: 6rpx solid white; */
     text-align: center;
-    color: white;
+    color: rgb(84, 35, 35);
 }
 
 .btn {
     width: 520rpx;
-    height: 220rpx;
-    margin-bottom: 66rpx;
+    height: 200rpx;
+    margin-bottom: 70rpx;
 }

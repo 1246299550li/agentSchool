@@ -3,7 +3,7 @@ let app = getApp();
 Page({
     data: {
         bg: "../../images/start.png",
-        background: "../../images/bg.png",
+        background: "../../images/bg.jpg",
         hitUrl: "../../images/hit.png",
         problem: [{
                 bg: '../../images/icon/icon1.png',

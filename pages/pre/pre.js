@@ -6,7 +6,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-        background: "../../images/bg.png",
+        background: "../../images/bg.jpg",
         hitUrl: "../../images/hit.png",
         problem: [{
 

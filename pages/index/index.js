@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
     data: {
-        background: "../../images/bgone.png",
+        background: "../../images/bgone1.jpg",
         isShow: true,
         userName: null
     },
@@ -39,7 +39,7 @@ Page({
             wx.navigateTo({
                 url: '../pre/pre'
             })
-        }, 1500)
+        }, 1300)
 
     }
 })

@@ -5,6 +5,7 @@
     height: 90vh;
     padding: 11vw;
     padding-top: 30vw;
+    color: rgb(84, 35, 35);
     /* background-color: greenyellow; */
 }
 
@@ -27,24 +28,26 @@
 }
 
 .input {
-    border: 6rpx solid red;
-    margin: 60rpx 0;
+    border-bottom: 4rpx solid black;
+    margin-top: 80rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
 }
 
 .submit {
     margin: 60rpx auto;
-    border: 6rpx solid red;
+    border: 6rpx solid rgb(210,43,31);
     height: 70rpx;
     width: 150rpx;
     border-radius: 10rpx;
-    color: red;
+    color: rgb(210,43,31);
     line-height: 70rpx;
     text-align: center;
     font-size: 50rpx;
 }
 
 .title {
-    color: red;
+    color: rgb(210,43,31);
     line-height: 70rpx;
     text-align: center;
     font-size: 48rpx;
